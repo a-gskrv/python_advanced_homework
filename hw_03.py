@@ -98,14 +98,15 @@ Base.metadata.create_all(engine)
 
 #############################
 # test
-category_1 = Category(name="Laptops", description="Laptops", id=1)
+category_1 = Category(name="Laptops", description="Laptops")
 session.add(category_1)
-category_2 = Category(name="Smartphones", id=2)
+category_2 = Category(name="Smartphones")
 session.add(category_2)
-category_3 = Category(name="Keyboards", id=3)
+category_3 = Category(name="Keyboards")
 session.add(category_3)
-category_4 = Category(name="Monitors", id=4)
+category_4 = Category(name="Monitors")
 session.add(category_4)
+session.commit()
 
 product_1 = Product(name="Dell 14' 1200", price=520.00, in_stock=True, category_id=category_1.id)
 session.add(product_1)
